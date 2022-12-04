@@ -1,0 +1,26 @@
+INT a, b=20,c,eda=a+b;
+RELc=20.,d=-0.1,e=7E-3,f=-a-c*d/e;
+LET t = 'e','s','\n';
+PAL wwqeqe,sade="dasda",s="assww""dsgahj";
+BOL q=V,r=F,x=(2>4)^(3<7),y=(4>=5)|!(3<=1),z=4==7, u=3!=2;
+VET[INT] ss=[3, 5,1,10];
+FUNCff(INT aa, REL bb = 4.5E20){
+	RET aa+bb;
+}
+
+FUNC s(){
+	SE x{
+		ENQ j{
+			j = F;
+		}
+	}SEN{
+		PARA i = 0, 10{
+			MON i;
+		}
+	}
+}
+
+INIT:
+t = ff(2,3) + 3;
+TEC a;
+

@@ -1,0 +1,36 @@
+INT h = 1, n, value, j;
+VET[INT] v;
+INIT:
+MON "Digite o número de elementos no array\n";
+TEC n;
+MON "Digite o(s) ", n ," número do array\n";
+PARA i 0, n{
+	TEC value;
+	v = v + value;
+	SE i != 0 {
+		MON ", ";
+	}
+	MON value;
+}
+MON '\n';
+h = 1;
+ENQ h < n{
+	h = 3 * h + 1;
+}
+ENQ h > 0{
+	PARA i = h, n{
+		value = v[i];
+		j = i;
+		ENQ j > h - 1 ^ value <= v[j - h]{
+			v[j] = v[j - h];
+			j = j - h;
+		}
+		v[j] = value;
+	}
+	h = h / 3;
+}
+MON v[0];
+PARA i 1, n{
+	MON ", ", v[i];
+}
+MON '\n';
