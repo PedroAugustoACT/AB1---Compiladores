@@ -1,0 +1,11 @@
+INT limite,i=1,j=1,aux;
+INIT:
+TEC limite;
+MON i;
+ENQ j < limite{
+	MON ", ", j;
+	aux = i + j;
+	i = j;
+	j = aux;	
+}
+MON '\n';

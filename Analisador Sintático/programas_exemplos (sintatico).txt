@@ -1,0 +1,952 @@
+// Programa 01 - Alô Mundo
+          Pgm = LDecl LFunc 'INIT' 'DP' LBloc 'FDA'
+          LDecl ='épsilon'
+          LFunc ='épsilon'
+              [0001, 0000] (0001,                 INIT) INIT
+              [0001, 0004] (0004,                   DP) :
+          LBloc = Bloc LBloc
+          Bloc = 'MON' Exp MonOp 'PV'
+              [0002, 0000] (0035,                  MON) MON
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTP'
+              [0002, 0004] (0016,               CONSTP) Alô mundo\n
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp ='épsilon'
+              [0002, 0018] (0003,                   PV) ;
+          LBloc ='épsilon'
+              [0002, 0000] (0036,                  FDA) FDA
+programa sem erros sintáticos
+// Programa 02 - flib
+          Pgm = LDecl LFunc 'INIT' 'DP' LBloc 'FDA'
+          LDecl = Decl 'PV' LDecl
+          Decl = Tipo LId
+          Tipo = 'INT'
+              [0001, 0000] (0007,                  INT) INT
+          LId = 'VAR' LIdx
+              [0001, 0004] (0006,                  VAR) limite
+          LIdx = 'VIR' LId
+              [0001, 0010] (0005,                  VIR) ,
+          LId = 'VAR' LIdx
+              [0001, 0011] (0006,                  VAR) i
+          LIdx = 'IGUAL' Exp LIdxx
+              [0001, 0012] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTI'
+              [0001, 0013] (0013,               CONSTI) 1
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          LIdxx = 'VIR' LId
+              [0001, 0014] (0005,                  VIR) ,
+          LId = 'VAR' LIdx
+              [0001, 0015] (0006,                  VAR) j
+          LIdx = 'IGUAL' Exp LIdxx
+              [0001, 0016] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTI'
+              [0001, 0017] (0013,               CONSTI) 1
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          LIdxx = 'VIR' LId
+              [0001, 0018] (0005,                  VIR) ,
+          LId = 'VAR' LIdx
+              [0001, 0019] (0006,                  VAR) aux
+          LIdx ='épsilon'
+              [0001, 0022] (0003,                   PV) ;
+          LDecl ='épsilon'
+          LFunc ='épsilon'
+              [0002, 0000] (0001,                 INIT) INIT
+              [0002, 0004] (0004,                   DP) :
+          LBloc = Bloc LBloc
+          Bloc = 'TEC' 'VAR' TecOp 'PV'
+              [0003, 0000] (0034,                  TEC) TEC
+              [0003, 0004] (0006,                  VAR) limite
+          TecOp ='épsilon'
+              [0003, 0010] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'MON' Exp MonOp 'PV'
+              [0004, 0000] (0035,                  MON) MON
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0004, 0004] (0006,                  VAR) i
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp ='épsilon'
+              [0004, 0005] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'ENQ' Exp 'ABLOCO' LBloc 'FBLOCO'
+              [0005, 0000] (0032,                  ENQ) ENQ
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0005, 0004] (0006,                  VAR) j
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx = 'OPCOMP' ExpA
+              [0005, 0006] (0026,               OPCOMP) <
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0005, 0008] (0006,                  VAR) limite
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Expx ='épsilon'
+              [0005, 0014] (0020,               ABLOCO) {
+          LBloc = Bloc LBloc
+          Bloc = 'MON' Exp MonOp 'PV'
+              [0006, 0001] (0035,                  MON) MON
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTP'
+              [0006, 0005] (0016,               CONSTP) , 
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp = 'VIR' Exp MonOp
+              [0006, 0009] (0005,                  VIR) ,
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0006, 0011] (0006,                  VAR) j
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp ='épsilon'
+              [0006, 0012] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'VAR' IgFunc 'PV'
+              [0007, 0001] (0006,                  VAR) aux
+          IgFunc = 'IGUAL' Exp
+              [0007, 0005] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0007, 0007] (0006,                  VAR) i
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx = 'OPA' ExpM ExpAx
+              [0007, 0009] (0024,                  OPA) +
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0007, 0011] (0006,                  VAR) j
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0007, 0012] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'VAR' IgFunc 'PV'
+              [0008, 0001] (0006,                  VAR) i
+          IgFunc = 'IGUAL' Exp
+              [0008, 0003] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0008, 0005] (0006,                  VAR) j
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0008, 0006] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'VAR' IgFunc 'PV'
+              [0009, 0001] (0006,                  VAR) j
+          IgFunc = 'IGUAL' Exp
+              [0009, 0003] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0009, 0005] (0006,                  VAR) aux
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0009, 0008] (0003,                   PV) ;
+          LBloc ='épsilon'
+              [0010, 0000] (0021,               FBLOCO) }
+          LBloc = Bloc LBloc
+          Bloc = 'MON' Exp MonOp 'PV'
+              [0011, 0000] (0035,                  MON) MON
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTL'
+              [0011, 0004] (0015,               CONSTL) \n
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp ='épsilon'
+              [0011, 0008] (0003,                   PV) ;
+          LBloc ='épsilon'
+              [0011, 0000] (0036,                  FDA) FDA
+programa sem erros sintáticos
+// Programa 03 - shell
+          Pgm = LDecl LFunc 'INIT' 'DP' LBloc 'FDA'
+          LDecl = Decl 'PV' LDecl
+          Decl = Tipo LId
+          Tipo = 'INT'
+              [0001, 0000] (0007,                  INT) INT
+          LId = 'VAR' LIdx
+              [0001, 0004] (0006,                  VAR) h
+          LIdx = 'IGUAL' Exp LIdxx
+              [0001, 0006] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTI'
+              [0001, 0008] (0013,               CONSTI) 1
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          LIdxx = 'VIR' LId
+              [0001, 0009] (0005,                  VIR) ,
+          LId = 'VAR' LIdx
+              [0001, 0011] (0006,                  VAR) n
+          LIdx = 'VIR' LId
+              [0001, 0012] (0005,                  VIR) ,
+          LId = 'VAR' LIdx
+              [0001, 0014] (0006,                  VAR) value
+          LIdx = 'VIR' LId
+              [0001, 0019] (0005,                  VIR) ,
+          LId = 'VAR' LIdx
+              [0001, 0021] (0006,                  VAR) j
+          LIdx ='épsilon'
+              [0001, 0022] (0003,                   PV) ;
+          LDecl = Decl 'PV' LDecl
+          Decl = Tipo LId
+          Tipo = 'VET' 'ALIST' Tipo 'FLIST'
+              [0002, 0000] (0012,                  VET) VET
+              [0002, 0003] (0018,                ALIST) [
+          Tipo = 'INT'
+              [0002, 0004] (0007,                  INT) INT
+              [0002, 0007] (0019,                FLIST) ]
+          LId = 'VAR' LIdx
+              [0002, 0009] (0006,                  VAR) v
+          LIdx ='épsilon'
+              [0002, 0010] (0003,                   PV) ;
+          LDecl ='épsilon'
+          LFunc ='épsilon'
+              [0003, 0000] (0001,                 INIT) INIT
+              [0003, 0004] (0004,                   DP) :
+          LBloc = Bloc LBloc
+          Bloc = 'MON' Exp MonOp 'PV'
+              [0004, 0000] (0035,                  MON) MON
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTP'
+              [0004, 0004] (0016,               CONSTP) Digite o número de elementos no array\n
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp ='épsilon'
+              [0004, 0046] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'TEC' 'VAR' TecOp 'PV'
+              [0005, 0000] (0034,                  TEC) TEC
+              [0005, 0004] (0006,                  VAR) n
+          TecOp ='épsilon'
+              [0005, 0005] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'MON' Exp MonOp 'PV'
+              [0006, 0000] (0035,                  MON) MON
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTP'
+              [0006, 0004] (0016,               CONSTP) Digite o(s) 
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp = 'VIR' Exp MonOp
+              [0006, 0018] (0005,                  VIR) ,
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0006, 0020] (0006,                  VAR) n
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp = 'VIR' Exp MonOp
+              [0006, 0022] (0005,                  VIR) ,
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTP'
+              [0006, 0023] (0016,               CONSTP)  número do array\n
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp ='épsilon'
+              [0006, 0044] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'PARA' 'VAR' 'IGUAL' Exp 'VIR' Exp PaOp 'ABLOCO' LBloc 'FBLOCO'
+              [0007, 0000] (0033,                 PARA) PARA
+              [0007, 0005] (0006,                  VAR) i
+              [0007, 0007] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTI'
+              [0007, 0009] (0013,               CONSTI) 0
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0007, 0010] (0005,                  VIR) ,
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0007, 0012] (0006,                  VAR) n
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          PaOp ='épsilon'
+              [0007, 0013] (0020,               ABLOCO) {
+          LBloc = Bloc LBloc
+          Bloc = 'TEC' 'VAR' TecOp 'PV'
+              [0008, 0001] (0034,                  TEC) TEC
+              [0008, 0005] (0006,                  VAR) value
+          TecOp ='épsilon'
+              [0008, 0010] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'VAR' IgFunc 'PV'
+              [0009, 0001] (0006,                  VAR) v
+          IgFunc = 'IGUAL' Exp
+              [0009, 0003] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0009, 0005] (0006,                  VAR) v
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx = 'OPA' ExpM ExpAx
+              [0009, 0007] (0024,                  OPA) +
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0009, 0009] (0006,                  VAR) value
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0009, 0014] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'SE' Exp 'ABLOCO' LBloc 'FBLOCO' SeN
+              [0010, 0001] (0030,                   SE) SE
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0010, 0004] (0006,                  VAR) i
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx = 'OPCOMP' ExpA
+              [0010, 0006] (0026,               OPCOMP) !=
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTI'
+              [0010, 0009] (0013,               CONSTI) 0
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Expx ='épsilon'
+              [0010, 0011] (0020,               ABLOCO) {
+          LBloc = Bloc LBloc
+          Bloc = 'MON' Exp MonOp 'PV'
+              [0011, 0002] (0035,                  MON) MON
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTP'
+              [0011, 0006] (0016,               CONSTP) , 
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp ='épsilon'
+              [0011, 0010] (0003,                   PV) ;
+          LBloc ='épsilon'
+              [0012, 0001] (0021,               FBLOCO) }
+          SeN ='épsilon'
+          LBloc = Bloc LBloc
+          Bloc = 'MON' Exp MonOp 'PV'
+              [0013, 0001] (0035,                  MON) MON
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0013, 0005] (0006,                  VAR) value
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp ='épsilon'
+              [0013, 0010] (0003,                   PV) ;
+          LBloc ='épsilon'
+              [0014, 0000] (0021,               FBLOCO) }
+          LBloc = Bloc LBloc
+          Bloc = 'MON' Exp MonOp 'PV'
+              [0015, 0000] (0035,                  MON) MON
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTL'
+              [0015, 0004] (0015,               CONSTL) \n
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp ='épsilon'
+              [0015, 0008] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'VAR' IgFunc 'PV'
+              [0016, 0000] (0006,                  VAR) h
+          IgFunc = 'IGUAL' Exp
+              [0016, 0002] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTI'
+              [0016, 0004] (0013,               CONSTI) 1
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0016, 0005] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'ENQ' Exp 'ABLOCO' LBloc 'FBLOCO'
+              [0017, 0000] (0032,                  ENQ) ENQ
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0017, 0004] (0006,                  VAR) h
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx = 'OPCOMP' ExpA
+              [0017, 0006] (0026,               OPCOMP) <
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0017, 0008] (0006,                  VAR) n
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Expx ='épsilon'
+              [0017, 0009] (0020,               ABLOCO) {
+          LBloc = Bloc LBloc
+          Bloc = 'VAR' IgFunc 'PV'
+              [0018, 0001] (0006,                  VAR) h
+          IgFunc = 'IGUAL' Exp
+              [0018, 0003] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTI'
+              [0018, 0005] (0013,               CONSTI) 3
+          ExpMx = 'OPM' ExpS ExpMx
+              [0018, 0007] (0025,                  OPM) *
+          ExpS = 'VAR' Id
+              [0018, 0009] (0006,                  VAR) h
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx = 'OPA' ExpM ExpAx
+              [0018, 0011] (0024,                  OPA) +
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTI'
+              [0018, 0013] (0013,               CONSTI) 1
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0018, 0014] (0003,                   PV) ;
+          LBloc ='épsilon'
+              [0019, 0000] (0021,               FBLOCO) }
+          LBloc = Bloc LBloc
+          Bloc = 'ENQ' Exp 'ABLOCO' LBloc 'FBLOCO'
+              [0020, 0000] (0032,                  ENQ) ENQ
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0020, 0004] (0006,                  VAR) h
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx = 'OPCOMP' ExpA
+              [0020, 0006] (0026,               OPCOMP) >
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTI'
+              [0020, 0008] (0013,               CONSTI) 0
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Expx ='épsilon'
+              [0020, 0009] (0020,               ABLOCO) {
+          LBloc = Bloc LBloc
+          Bloc = 'PARA' 'VAR' 'IGUAL' Exp 'VIR' Exp PaOp 'ABLOCO' LBloc 'FBLOCO'
+              [0021, 0001] (0033,                 PARA) PARA
+              [0021, 0006] (0006,                  VAR) i
+              [0021, 0008] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0021, 0010] (0006,                  VAR) h
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0021, 0011] (0005,                  VIR) ,
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0021, 0013] (0006,                  VAR) n
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          PaOp ='épsilon'
+              [0021, 0014] (0020,               ABLOCO) {
+          LBloc = Bloc LBloc
+          Bloc = 'VAR' IgFunc 'PV'
+              [0022, 0002] (0006,                  VAR) value
+          IgFunc = 'IGUAL' Exp
+              [0022, 0008] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0022, 0010] (0006,                  VAR) v
+          Id = 'ALIST' Exp 'FLIST'
+              [0022, 0011] (0018,                ALIST) [
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0022, 0012] (0006,                  VAR) i
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0022, 0013] (0019,                FLIST) ]
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0022, 0014] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'VAR' IgFunc 'PV'
+              [0023, 0002] (0006,                  VAR) j
+          IgFunc = 'IGUAL' Exp
+              [0023, 0004] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0023, 0006] (0006,                  VAR) i
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0023, 0007] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'ENQ' Exp 'ABLOCO' LBloc 'FBLOCO'
+              [0024, 0002] (0032,                  ENQ) ENQ
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0024, 0006] (0006,                  VAR) j
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx = 'OPCOMP' ExpA
+              [0024, 0008] (0026,               OPCOMP) >
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0024, 0010] (0006,                  VAR) h
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx = 'OPA' ExpM ExpAx
+              [0024, 0012] (0024,                  OPA) -
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTI'
+              [0024, 0014] (0013,               CONSTI) 1
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Expx = 'OPLOG' Fb Expx
+              [0024, 0016] (0027,                OPLOG) ^
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0024, 0018] (0006,                  VAR) value
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx = 'OPCOMP' ExpA
+              [0024, 0024] (0026,               OPCOMP) <=
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0024, 0027] (0006,                  VAR) v
+          Id = 'ALIST' Exp 'FLIST'
+              [0024, 0028] (0018,                ALIST) [
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0024, 0029] (0006,                  VAR) j
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx = 'OPA' ExpM ExpAx
+              [0024, 0031] (0024,                  OPA) -
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0024, 0033] (0006,                  VAR) h
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0024, 0034] (0019,                FLIST) ]
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Expx ='épsilon'
+              [0024, 0035] (0020,               ABLOCO) {
+          LBloc = Bloc LBloc
+          Bloc = 'VAR' IgFunc 'PV'
+              [0025, 0003] (0006,                  VAR) v
+          IgFunc = 'ALIST' Exp 'FLIST' 'IGUAL' Exp
+              [0025, 0004] (0018,                ALIST) [
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0025, 0005] (0006,                  VAR) j
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0025, 0006] (0019,                FLIST) ]
+              [0025, 0008] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0025, 0010] (0006,                  VAR) v
+          Id = 'ALIST' Exp 'FLIST'
+              [0025, 0011] (0018,                ALIST) [
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0025, 0012] (0006,                  VAR) j
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx = 'OPA' ExpM ExpAx
+              [0025, 0014] (0024,                  OPA) -
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0025, 0016] (0006,                  VAR) h
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0025, 0017] (0019,                FLIST) ]
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0025, 0018] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'VAR' IgFunc 'PV'
+              [0026, 0003] (0006,                  VAR) j
+          IgFunc = 'IGUAL' Exp
+              [0026, 0005] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0026, 0007] (0006,                  VAR) j
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx = 'OPA' ExpM ExpAx
+              [0026, 0009] (0024,                  OPA) -
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0026, 0011] (0006,                  VAR) h
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0026, 0012] (0003,                   PV) ;
+          LBloc ='épsilon'
+              [0027, 0002] (0021,               FBLOCO) }
+          LBloc = Bloc LBloc
+          Bloc = 'VAR' IgFunc 'PV'
+              [0028, 0002] (0006,                  VAR) v
+          IgFunc = 'ALIST' Exp 'FLIST' 'IGUAL' Exp
+              [0028, 0003] (0018,                ALIST) [
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0028, 0004] (0006,                  VAR) j
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0028, 0005] (0019,                FLIST) ]
+              [0028, 0007] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0028, 0009] (0006,                  VAR) value
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0028, 0014] (0003,                   PV) ;
+          LBloc ='épsilon'
+              [0029, 0001] (0021,               FBLOCO) }
+          LBloc = Bloc LBloc
+          Bloc = 'VAR' IgFunc 'PV'
+              [0030, 0001] (0006,                  VAR) h
+          IgFunc = 'IGUAL' Exp
+              [0030, 0003] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0030, 0005] (0006,                  VAR) h
+          Id ='épsilon'
+          ExpMx = 'OPM' ExpS ExpMx
+              [0030, 0007] (0025,                  OPM) /
+          ExpS = 'CONSTI'
+              [0030, 0009] (0013,               CONSTI) 3
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0030, 0010] (0003,                   PV) ;
+          LBloc ='épsilon'
+              [0031, 0000] (0021,               FBLOCO) }
+          LBloc = Bloc LBloc
+          Bloc = 'MON' Exp MonOp 'PV'
+              [0032, 0000] (0035,                  MON) MON
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0032, 0004] (0006,                  VAR) v
+          Id = 'ALIST' Exp 'FLIST'
+              [0032, 0005] (0018,                ALIST) [
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTI'
+              [0032, 0006] (0013,               CONSTI) 0
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0032, 0007] (0019,                FLIST) ]
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp ='épsilon'
+              [0032, 0008] (0003,                   PV) ;
+          LBloc = Bloc LBloc
+          Bloc = 'PARA' 'VAR' 'IGUAL' Exp 'VIR' Exp PaOp 'ABLOCO' LBloc 'FBLOCO'
+              [0033, 0000] (0033,                 PARA) PARA
+              [0033, 0005] (0006,                  VAR) i
+              [0033, 0007] (0029,                IGUAL) =
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTI'
+              [0033, 0009] (0013,               CONSTI) 1
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0033, 0010] (0005,                  VIR) ,
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0033, 0012] (0006,                  VAR) n
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          PaOp ='épsilon'
+              [0033, 0013] (0020,               ABLOCO) {
+          LBloc = Bloc LBloc
+          Bloc = 'MON' Exp MonOp 'PV'
+              [0034, 0001] (0035,                  MON) MON
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTP'
+              [0034, 0005] (0016,               CONSTP) , 
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp = 'VIR' Exp MonOp
+              [0034, 0009] (0005,                  VIR) ,
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0034, 0011] (0006,                  VAR) v
+          Id = 'ALIST' Exp 'FLIST'
+              [0034, 0012] (0018,                ALIST) [
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'VAR' Id
+              [0034, 0013] (0006,                  VAR) i
+          Id ='épsilon'
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+              [0034, 0014] (0019,                FLIST) ]
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp ='épsilon'
+              [0034, 0015] (0003,                   PV) ;
+          LBloc ='épsilon'
+              [0035, 0000] (0021,               FBLOCO) }
+          LBloc = Bloc LBloc
+          Bloc = 'MON' Exp MonOp 'PV'
+              [0036, 0000] (0035,                  MON) MON
+          Exp = Fb Expx
+          Fb = ExpA Fbx
+          ExpA = ExpM ExpAx
+          ExpM = ExpS ExpMx
+          ExpS = 'CONSTL'
+              [0036, 0004] (0015,               CONSTL) \n
+          ExpMx ='épsilon'
+          ExpAx ='épsilon'
+          Fbx ='épsilon'
+          Expx ='épsilon'
+          MonOp ='épsilon'
+              [0036, 0008] (0003,                   PV) ;
+          LBloc ='épsilon'
+              [0036, 0000] (0036,                  FDA) FDA
+programa sem erros sintáticos
